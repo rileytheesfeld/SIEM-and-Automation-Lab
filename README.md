@@ -1,5 +1,33 @@
-# SIEM-and-Automation-Lab
-Homelab project to build a SIEM with SOAR integration
+# SIEM-and-Automation-Project
+I'm wanting to learn more about threat detection and incident response. I wanted to teach myself how to build up a mock SoC, with EDR, SIEM,and SOAR implementation. 
 
-# Overview
-The point of this project is to build an environment with an endpoint, EDR, SIEM, and SOAR all connected and working together.
+## Goals
+  1. Teach myself how to deploy and manage a small scale "simulated" threat detection and incident response engineering infrastructure.
+  2. Deploy default detections, custom detections, maintain detection lifecycles while collecting data from threat feeds, custom honeypots, and a simulated threat environment.
+
+At the end of this project I would like to experience what a security engineer might deal with on an average day. The way I plan on building this lab is through utilization of different networking, virtualization, and open-source technologies. This is the beginning of a larger scale implementation I plan to create down the line with this as a foundation.
+
+# The SIEM-and-Automation Project Topology
+![Screenshot 2024-11-16 163934](https://github.com/user-attachments/assets/b8e2342c-e1d0-4bf6-8f1d-2901c2b2f49d)
+
+
+## Project Breakdown / Key Technologies
+Starting from my computer to splunk, here is an overview of the technologies utilized in the project.
+  - **Proxmox:** Virtualization platform that was utilized for this lab, all built on my HPE DL380p server.
+  - **Personal Computer:** My computer that is used to interface with the infrastructure. Login, configuration, and management are handled from this endpoint.
+  - **Detection Generator:** Leveraging Red Canary's Atomic Red Team for pre-developed attacks. Utilizing the MITRE ATT&CK framework, deploys common "red team" attacks on a Windows 11 VM.
+  - **Wazuh:** Open-source XDR and SIEM application used to ingest data from the endpoint. Used only to as ingress to then be forwarded to splunk enterprise.
+  - **Splunk Enterprise:** Acts as the centralized SIEM system to monitor, query, and build alerts based on logs, also forwards logs to splunk soar for automation tasks.
+  - **Splunk SOAR:** The security orchestration, automation, and response platform to detect and remediate any threats.
+
+*Wazuh, and Splunk Enterprise were built on Ubuntu Server 22.04. Splunk SOAR was built on CentOS 8.
+
+
+## Center on the SIEM capabilities
+A central part of the goals I have set for this project is becoming proficient in SIEM parsing and alerting. I plan on starting with Splunk as it is the most popular SIEM system in the industry right now. I also want to learn to read and write playbooks using splunks SOAR solution. 
+
+
+## Skills improved from this project
+  - Data analysis and log analysis
+  - Working knowledge and implementation of attack tactics, techniques and procedures. (TTPs)
+  - Parsing necessary details when looking for TTPs
