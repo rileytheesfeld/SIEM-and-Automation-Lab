@@ -15,7 +15,7 @@ At the end of this lab I would like to experience what a security engineer might
 Starting from my computer to splunk, here is an overview of the technologies utilized in the project.
   - **Proxmox:** Virtualization platform that was utilized for this lab, all built on my HPE DL380p server.
   - **Personal Computer:** My computer that is used to interface with the infrastructure. Login, configuration, and management are handled from this endpoint.
-  - **Detection Generator:** Leveraging Red Canary's Atomic Red Team for pre-developed attacks. Utilizing the MITRE ATT&CK framework, deploys common "red team" attacks on a Windows 11 VM.
+  - **Detection Generator:** Leveraging Red Canary's Atomic Red Team for pre-developed attacks. Utilizing the MITRE ATT&CK framework, deploys common "red team" attacks on a Windows 11 VM. Installed FlareVM for Malware Analysis and Reverse Engineering.
   - **Wazuh:** Open-source XDR and SIEM application used to ingest data from the endpoint. Used only to as ingress to then be forwarded to splunk enterprise.
   - **Splunk Enterprise:** Acts as the centralized SIEM system to monitor, query, and build alerts based on logs, also forwards logs to splunk soar for automation tasks.
   - **Splunk SOAR:** The security orchestration, automation, and response platform to detect and remediate any threats.
